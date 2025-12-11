@@ -27,5 +27,54 @@ This project is a full-stack e-commerce application for web and mobile. It inclu
 5. Setup mobile: `cd mobile && npm install`  
 6. Start servers: Node backend + Angular frontend + Ionic mobile
 
+Repo Structure:
+ecommerce-fullstack/
+│
+├── db/
+│   └── schema.sql           # MySQL database schema (Day 1)
+│
+├── backend/
+│   ├── index.js             # Entry point of Node.js API
+│   ├── db.js                # MySQL connection
+│   ├── routes/
+│   │    ├── auth.js
+│   │    ├── products.js
+│   │    ├── cart.js
+│   │    └── orders.js
+│   ├── middleware/
+│   │    └── auth.js
+│   ├── controllers/
+│   │    ├── authController.js
+│   │    ├── productController.js
+│   │    ├── cartController.js
+│   │    └── orderController.js
+│   ├── package.json
+│   └── .env.example
+│
+├── frontend/
+│   ├── angular.json
+│   ├── package.json
+│   └── src/
+│        ├── app/
+│        │    ├── components/
+│        │    ├── services/
+│        │    ├── auth/
+│        │    └── products/
+│        └── index.html
+│
+├── mobile/
+│   ├── ionic.config.json
+│   ├── package.json
+│   └── src/
+│        ├── app/
+│        │    ├── pages/
+│        │    │    ├── home/
+│        │    │    ├── products/
+│        │    │    └── cart/
+│        │    └── services/
+│        └── index.html
+│
+└── README.md
+
 ## Current Status
 Day 1 – Database schema ready
